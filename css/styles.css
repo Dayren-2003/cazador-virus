@@ -1,0 +1,103 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+  overflow: hidden;
+  background: black;
+}
+
+/* 🎮 CANVAS */
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* detrás del menú */
+}
+
+/* 📋 MENÚ PRINCIPAL (SIN FONDO NEGRO) */
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: transparent; /* 🔥 clave para no cambiar tu diseño */
+  z-index: 2;
+}
+
+/* TEXTO DEL MENÚ */
+#menu h1,
+#menu p {
+  color: white; /* asegúrate que se vea */
+  text-align: center;
+}
+
+/* BOTONES */
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #00c3ff;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0099cc;
+}
+
+/* BOTONES DE NIVELES */
+#levels {
+  margin: 20px;
+}
+
+#levels button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+/* 💀 GAME OVER */
+#gameOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.6); /* ligero, no agresivo */
+  z-index: 2;
+
+  color: white;
+  text-align: center;
+}
+
+/* TEXTO GAME OVER */
+#gameOver h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#gameOver p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cazador de Virus PRO</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+
+<body>
+
+<!-- MENU -->
+<div id="menu">
+  <h1>🦠 CAZADOR DE VIRUS</h1>
+  <p>Laura Dayren Elizalde Morales</p>
+
+  <h3>Selecciona nivel</h3>
+  <div id="levels"></div>
+
+  <button onclick="startGame()">JUGAR</button>
+</div>
+
+<!-- GAME OVER -->
+<div id="gameOver">
+  <h1>GAME OVER</h1>
+  <h2 id="finalScore"></h2>
+  <button onclick="restartGame()">Reiniciar</button>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script src="js/game.js"></script>
+</body>
+</html>
