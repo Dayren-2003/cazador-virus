@@ -277,3 +277,28 @@ function animate() {
 
 // INICIO
 animate();
+// 📱 MOVIMIENTO CON DEDO
+canvas.addEventListener("touchmove", (e) => {
+  if (gameState !== "playing") return;
+
+  e.preventDefault();
+  const touch = e.touches[0];
+
+  // centra el arma con el dedo
+  player.x = touch.clientX;
+}, { passive: false });
+
+
+// 🔫 DISPARO CON TOQUE
+canvas.addEventListener("touchstart", (e) => {
+  if (gameState !== "playing") return;
+
+  e.preventDefault();
+  shoot();
+}, { passive: false });
+
+
+// 🚫 EVITAR SCROLL EN CELULAR
+document.body.addEventListener("touchmove", (e) => {
+  e.preventDefault();
+}, { passive: false });q
